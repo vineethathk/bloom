@@ -330,8 +330,8 @@ def import_upstream(tarball_path, patches_path, version, name, replace):
         # Assert packages in upstream are the correct version
         _, actual_version, _ = get_package_data('upstream')
         if actual_version != version:
-            error("The package(s) in upstream are version '{0}', but the version to be released is '{1}', aborting."
-                  .format(actual_version, version), exit=True)
+            warning("The package(s) in upstream are version '{0}', but the version to be released is '{1}'."
+                  .format(actual_version, version))
         # Create the tag
         info("Creating tag: '{0}'".format(upstream_tag))
         create_tag(upstream_tag)
