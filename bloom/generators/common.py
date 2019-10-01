@@ -131,6 +131,7 @@ def package_conditional_context(ros_distro):
     return {
             'ROS_VERSION': ros_version,
             'ROS_DISTRO': ros_distro,
+            'ROS_PYTHON_VERSION': '2',
             }
 
 
